@@ -110,20 +110,30 @@ Create your AWS environment
   - Scroll to the bottom and select Create Stack
   - You will be redirected to a status page that says CREATE_IN_PROGRESS
 
-- Once you have created the AWS Cloud formation stack you can [return to the EC2 service](https://console.aws.amazon.com/ec2/v2/home?region=us-east-1#Home:).  
+- Once it says CREATE_COMPLETE:
+
+  - **WALK AWAY FOR ONE HOUR.** Not joking. Do not pass go, do not collect on hundred dollars. Close the tabs to resist tempation. Whatever it takes.
+
+## Getting info to connect:
+
+- Assuming you have **waited one hour** as previously stated.
+- [Return to the EC2 service](https://console.aws.amazon.com/ec2/v2/home?region=us-east-1#Home:)
   Here you should see additional resources have been created (not everything says 0 anymore)
 - Click on [Running Instances](https://console.aws.amazon.com/ec2/v2/home?region=us-east-1#Instances:sort=instanceState)
-- Our machine should now be created (or almost ready).
-- Your machine will be assigned an Elastic IP address. This IP address is what we will use to SSH into the virtual environment.
+- You should see TWO instances. The instructions below will go through first time connecting instructions for each system.
 
 **WARNING**
-While exploring and discovery is an important part of this course, any additional resources you create in AWS have an associated charge. If resources besides those strictly asked for by this course stay running, you risk running out of funds for this course. While fixable, this will hinder your ability to complete projects on time.
+While exploring and discovery is an important part of this course, any additional resources you create in AWS have an associated charge. If resources besides those strictly asked for by this course stay running, you risk running out of funds for this course. Let me know if you need help cleaning up and / or check out the [Troubleshooting](#troubleshooting) guide below.
 
-## Connecting to the AWS environment
+## Connecting to the UBUNTU AWS environment
 
-**You are now ready to make an SSH connection to your AWS server.**
+- In the [Running Instances](https://console.aws.amazon.com/ec2/v2/home?region=us-east-1#Instances:sort=instanceState) menu, click the checkbox next to `CEG 2410 Ubuntu`
+- A description menu will open up below.
+- Identify the Public IPv4 Address in the middle column. This is the IP address you will need to connect to the machine via SSH
 
-- Open a terminal.
+**You are now ready to make an SSH connection to your Ubuntu AWS server.**
+
+- Open a terminal on your local system.
 - Copy of the AWS SSH key that was downloaded to your home directory
   - Helpful commands: `cp, ls, man`
   - The manual method: Create a file with a useful name (or the same name as the downloaded file) `ceg2410-aws-vm.pem`
@@ -138,6 +148,18 @@ While exploring and discovery is an important part of this course, any additiona
    Note: replace _/path/to/private/key_ and _ElasticIP_ with your information
   - If your connection was refused, you may have forgotten to put the username `ubuntu` in front of your Elastic IP address
 - You are now signed in to your AWS Educate system as the user `ubuntu`
+
+## Connecting to the WINDOWS SERVER AWS Environment
+
+- - In the [Running Instances](https://console.aws.amazon.com/ec2/v2/home?region=us-east-1#Instances:sort=instanceState) menu, click the checkbox next to `CEG 2410 Windows Server 2019`
+- A description menu will open up below.
+- Identify the Public IPv4 Address in the middle column. This is the IP address you will need to connect to the machine via Remote Desktop
+- In the `Actions` tab (top right-ish), select `Security` then select `Get Windows password`
+  - You will be prompted to upload or copy the contents of the key that was downloaded in the "Key Pair" step. Do so
+  - Select `Decrypt Password`
+  - The displayed password is the password for the account to log in to the Windows Server. Copy it to somewhere secure.
+
+**You are now ready to make a remote desktop connection to your Windows AWS server.**
 
 ## Git Going
 
