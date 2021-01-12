@@ -74,7 +74,7 @@ Assuming you have registered for AWS Educate and have access to this class, perf
 - [Sign in to AWS educate](https://www.awseducate.com/signin/SiteLogin)
 
   - Click the `My Classrooms` Button
-  - Click the blue `Go to classroom` button for _Design of Info Tech Systems_
+  - Click the blue `Go to classroom` button for _Systems Administration_
   - Click the blue `AWS Console` button
 
   This will launch the AWS console  
@@ -92,7 +92,7 @@ Create an SSH key pair to get to your virtual machine.
   Right now they should all be 0.
 - Click on [Key Pairs](https://console.aws.amazon.com/ec2/v2/home?region=us-east-1#KeyPairs:sort=keyName)
 - Click on the `Create Key Pair` blue button.
-  - Choose the name for your key. I used `ceg3120-aws-vm`  
+  - Choose the name for your key. I used `ceg2410-aws-vm`  
     **MAKE SURE YOU SELECT SSH (pem) as the key type**
   - This creates a public/private key pair, stores the public key in AWS, and downloads the private key to your local machine.
   - **Do not lose the downloaded key.**
@@ -126,7 +126,7 @@ While exploring and discovery is an important part of this course, any additiona
 - Open a terminal.
 - Copy of the AWS SSH key that was downloaded to your home directory
   - Helpful commands: `cp, ls, man`
-  - The manual method: Create a file with a useful name (or the same name as the downloaded file) `ceg3120-aws-vm.pem`
+  - The manual method: Create a file with a useful name (or the same name as the downloaded file) `ceg2410-aws-vm.pem`
   - Open a text editor (`vim` or `nano`)
   - Copy and paste the contents of the key that was downloaded from AWS Educate into the file.
 - Change the permissions on the key file in your directory
@@ -142,13 +142,7 @@ While exploring and discovery is an important part of this course, any additiona
 ## Git Going
 
 1. Create or sign in to your [github](https://github.com/) account.
-2. Create a new Repository with a name of your choice. I recommend `Spring2021-CEG3120`.
-   - Set it to Private (you can change this in the future).
-   - Check the box to Initialize this repository with a README
-   - Click Create Repository
-3. In your github repository, select Code (green button). It should say "Clone with HTTPS". Copy the URL to your clipboard.
-4. SSH in to your AWS Educate environment.
-5. Use the `git` command to `clone` your repository.
+2. For this course, you will be receiving invites to assignments via GitHub Classrooms. Once you get the invite, you will need to select your @wright.edu email address from the list. This will create your repository and link it to your GitHub account.
 
 ## Git Passwordless (If you want)
 
