@@ -151,7 +151,7 @@ While exploring and discovery is an important part of this course, any additiona
 
 ## Connecting to the WINDOWS SERVER AWS Environment
 
-- - In the [Running Instances](https://console.aws.amazon.com/ec2/v2/home?region=us-east-1#Instances:sort=instanceState) menu, click the checkbox next to `CEG 2410 Windows Server 2019`
+- In the [Running Instances](https://console.aws.amazon.com/ec2/v2/home?region=us-east-1#Instances:sort=instanceState) menu, click the checkbox next to `CEG 2410 Windows Server 2019`
 - A description menu will open up below.
 - Identify the Public IPv4 Address in the middle column. This is the IP address you will need to connect to the machine via Remote Desktop
 - In the `Actions` tab (top right-ish), select `Security` then select `Get Windows password`
@@ -160,6 +160,30 @@ While exploring and discovery is an important part of this course, any additiona
   - The displayed password is the password for the account to log in to the Windows Server. Copy it to somewhere secure.
 
 **You are now ready to make a remote desktop connection to your Windows AWS server.**
+
+- Find a remote desktop software.
+  - Remote Desktop Connection (Windows)
+    - Enter IP address to CEG 2410 Windows Server 2019
+    - The first time you connect will take **FOREVER** or about 5-10 minutes, just minimize the screen and be patient.
+    - Once the log in screen comes up:
+      - Username: `administrator`
+      - Password: decrypted password from steps above
+  - MobaXTerm
+    - Type IP address in to bar on homepage or in Sessions bar, right click and select "New Session"
+    - Select RDP from the options displayed (it has a little Windows logo in it)
+    - Make sure the Remote Host Field has the IP address you are connecting to
+    - For the Username field, enter `administrator`
+    - The Port field should have `3389`
+    - Select OK
+    - You will be promped to enter the account password. This is the password you decrypted in the steps above.
+    - The first time you connect will take **FOREVER** or about 5-10 minutes, just minimize the screen and be patient.
+  - [Microsoft Remote Desktop](https://apps.apple.com/us/app/microsoft-remote-desktop/id1295203466?mt=12) (Macs)
+    - Note: these instruction need to be verified. Please let me know your actual experience / steps so we can improve this documentation
+    - Enter IP address to CEG 2410 Windows Server 2019
+    - The first time you connect will take **FOREVER** or about 5-10 minutes, just minimize the screen and be patient.
+    - Once the log in screen comes up:
+      - Username: `administrator`
+      - Password: decrypted password from steps above
 
 ## Git Going
 
