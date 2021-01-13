@@ -24,6 +24,7 @@ I recommend [Visual Studio Code](https://code.visualstudio.com/) as a cross plat
   - Did not reboot **before** running the change version command
 - After installing Ubuntu from the Windows store, open Ubuntu once
   - After the installion message finishes, you should be prompted to create a username and password
+  - [WSL2 Troubleshooting](#WSL-2-Install-Errors)
 
 2. In later labs, you will need two terminals open. It is absolutely alright to open multiple instances of Ubuntu, but it can be convenient to have a "tab" based setup. I recommend `Windows Terminal` (can be found in the Windows Store) or `MobaXTerm` (installation instructions below)
 
@@ -226,6 +227,17 @@ This guide here refers to a [Chrome Extension for SSH connections](https://www.l
   key file - you can then select your key from the dropdown.
 - You may need to make a "failed" connection in order to get the permission to access files  
   questions to pop up.
+
+### WSL 2 Install Errors
+
+- Error message:
+
+```
+The requested operation could not be completed due to a virtual disk system limitation.
+Virtual hard disk files must be uncompressed and unencrypted and must not be sparse.
+```
+
+- Follow [WSL2 VHD Issue Guide](https://utf9k.net/blog/wsl2-vhd-issue/)
 
 ### Acknowledgement
 
