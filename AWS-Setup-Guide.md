@@ -36,6 +36,8 @@ I recommend [Visual Studio Code](https://code.visualstudio.com/) as a cross plat
 - You can now delete the installation files
 - Open Moba. You can now choose to run WSL Ubuntu _or_ Moba bash.
   - To change terminals, go to Settings -> Configuration. Select the Terminal tab. In the dropdown at the bottom, change from `bash` to `WSL Ubuntu`
+- Keep your SSH session "alive"
+  - `Settings` -> `Configuration`. In `SSH` tab, checkmark the box corresponding to `SSH keepalive`
 
 4. If you **do not have administrative privileges** on the system, you will need to install MobaXTerm (step 3) and install Cygutils (instructions below) in order to perform the labs.
 
