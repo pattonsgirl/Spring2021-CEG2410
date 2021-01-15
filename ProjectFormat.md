@@ -1,4 +1,4 @@
-# Guide to Lab Access
+# Guide to project Access
 
 ## Setup:
 
@@ -6,7 +6,7 @@
 
 ## Instructions
 
-The Pilot page for this course contains links to the labs. These links will let you generate a repository for the corresponding lab.
+The Pilot page for this course contains links to the projects. These links will let you generate a repository for the corresponding project.
 
 - [Setup](#Setup)
 - [How to use](#How-to-use)
@@ -14,21 +14,21 @@ The Pilot page for this course contains links to the labs. These links will let 
 
 ### Setup
 
-- Click the link in Pilot corresponding to the lab you are working on.
+- Click the link in Pilot corresponding to the project you are working on.
 - Select your wright.edu email address from the list shown.
 - Select `OK` on the popup to confirm you selected the correct email address.
   ![Accept Assignment](Images/github-classrooms-acceptassignment.png)
 - Select `Accept this assignment`
 - After a minute, refresh the next page. You'll see something similar to:
   ![You're ready to go!](Images/github-classrooms-success.png)
-- Click the lower link / link that looks similar to: `https://github.com/WSU-kduncan/lab01-ceg2350-sp21-pattonsgirl`. The top link sometimes presents an "error" but things are actually fine.
-- It may be convenient to bookmark each of these lab links for easy access.
+- Click the lower link / link that looks similar to: `https://github.com/WSU-kduncan/project01-ceg2350-sp21-pattonsgirl`. The top link sometimes presents an "error" but things are actually fine.
+- It may be convenient to bookmark each of these project links for easy access.
 
 ### How to use
 
 - The repositories created in this course are **private**. The only people with access are you, me, and the TAs for this course.
-- Your answers to the labs are going to go in a `README.md` file that should already exist in the repository. You will edit this file with your lab answers.
-- The lab writeup itself will exist in another file called `LabProcedure.md`.
+- Your answers to the projects are going to go in a `README.md` file that should already exist in the repository. You will edit this file with your project answers.
+- The project writeup itself will exist in another file called `projectProcedure.md`.
 - You may want to open these files in different tabs for easy access.
 - Edit in GitHub (the website)
   - Click in to the file you want to edit
@@ -38,7 +38,7 @@ The Pilot page for this course contains links to the labs. These links will let 
 - To `clone` the repository:
   - Click the green `Code` button
   - Select `HTTPS` for username + password authentication or `SSH` for SSH key authentication
-    - Ask in class, the Discord channel, or lab for assistance
+    - Ask in class, the Discord channel, or project for assistance
   - In a terminal use `git clone` followed by the corresponding URL to clone your repository
 
 ### Submission
