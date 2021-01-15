@@ -4,6 +4,7 @@
 - [Paragraphs](#Paragraphs)
 - [Lists](#Lists)
 - [Links & Images](#Links-&-Images)
+- [Code](#Code)
 
 ## Headers
 
@@ -61,3 +62,22 @@ This is a link to [README.md](README.md)
 ```
 
 ![Markdown demo screenshot](Images/markdown-demo.png)
+
+## Code
+
+````
+Single out one word with `single` back quotes
+\```
+Block off a chunk off code by
+   surrounding it
+   with triple back quotes
+\```
+````
+
+Single out one word with `single` back quotes
+
+```
+Block off a chunk off code by
+   surrounding it
+   with triple back quotes
+```
