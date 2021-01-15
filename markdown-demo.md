@@ -1,21 +1,63 @@
-# Header 1
+# Markdown Guide
+
+- [Headers](#Headers)
+- [Paragraphs](#Paragraphs)
+- [Lists](#Lists)
+- [Links & Images](#Links-&-Images)
+
+## Headers
+
+```
+# Markdown Guide
+## Headers
+### Bulleted
+```
+
+## Paragraphs
+
+Put two spaces after this line followed by `Enter` to start new line.
+
+Just hitting the enter key doesn't work
+
+## Lists
+
+### Bulleted
+
+```
+- bulleted list
+* also bulleted
+```
 
 - bulleted list
 
 * also bulleted
 
+### Numeric
+
+```
+1. step the first
+2. step the second
+```
+
 1. step the first
 2. step the second
 
-This is a sentence. Need to put two spaces after to start next sentence on a new line
+## Links & Images
 
-Just hitting the enter key doesn't work
+### Links
 
-[This is a link](https://google.com)  
+```
+This is a link to [Google](https://google.com)
+This is a link to [README.md](README.md)
+```
+
+This is a link to [Google](https://google.com)  
 This is a link to [README.md](README.md)
 
+### Images
+
+```
 ![Markdown demo screenshot](Images/markdown-demo.png)
+```
 
-## smaller
-
-### smallest
+![Markdown demo screenshot](Images/markdown-demo.png)
