@@ -9,15 +9,16 @@ Scripts:
 Recommend commit points / milestones?
 File reading - get loop working, output to console, get another part working, etc.
 
-- Bulk File renaming
+- Parsing files
 
+  - File renaming?
   - Powershell
   - Bash
     https://powershellcookbook.com/recipe/uZgg/replace-text-in-a-string
 
 - Installation
   - script a strange install, like singularity
-  - install to other systems given a list
+  - install to other systems given a list (post AD)
 - User creation
 - Auto-run
   - cron jobs
@@ -27,6 +28,7 @@ Configurations
 
 - SSL Certs
 - AD setup documentation
+  - Kerberos?
 - SLAPD setup documentation
 - Email from system
 - File Sharing
