@@ -30,6 +30,7 @@ The goal here is to write a script just for you.  This script is something you c
 - Your first objective is to download a file from the internet to a specific spot.  The file to download is: 
   - `https://raw.githubusercontent.com/nanotech/jellybeans.vim/master/colors/jellybeans.vim`
   - Download the file (or move the file) to `~/.vim/colors/`
+    - Note: in your terminal while you fidget **and** in your script, you will need to make this directory
   - Commands to play with: `curl`, `wget`
   - Get this down to using one line / command
   - Once you have it as one line that downloads the file & puts it in the directory specified, add the line to your script.

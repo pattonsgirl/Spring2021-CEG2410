@@ -14,6 +14,10 @@ A very common task as a sys admin is dealing with data.  Specifically, data that
 
 - In the main folder of your repository, create a folder called `file-scripts`
 
+### Nothing but improvements
+
+Create an improvement to your `my-way` script.  Only create `~/.vim/colors` if the folder does not exist
+
 
 ## Submission
 
