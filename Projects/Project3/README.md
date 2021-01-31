@@ -18,6 +18,10 @@ A very common task as a sys admin is dealing with data.  Specifically, data that
 
 Create an improvement to your `my-way` script.  Only create `~/.vim/colors` if the folder does not exist
 
+## System Lockdown
+
+Create a user (fileshare?) who no one can ssh as, but can request downloads from (no shell)
+
 
 ## Submission
 
