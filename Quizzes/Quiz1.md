@@ -26,4 +26,4 @@ If this answer is no, hop to it.  See 1/25 lecture
 
 What file permissions does dev have for the file bubbles.txt?
 
-- dev goes with the second set of permissions, `r-x` which stand for `read` and `write`
+- dev goes with the second set of permissions, `r-x` which stand for `read` and `execute`
