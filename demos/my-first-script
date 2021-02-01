@@ -1,15 +1,33 @@
 #! /bin/bash
 
+# if [[ $1 = "output.txt"  ]]
+if [[ -f $1 ]]
+then
+	cat $1
+else
+	echo "File is not a regular file or does not exist"
+fi
+
+for this_one in $@
+do
+	if [[ -f $this_one ]]
+	then
+		echo $this_one " already exists"
+	else
+		touch $this_one
+	fi
+done
+
 echo "Hello World!"
-printf "Hello World! from printf statement"
 
 input="Pre filled text"
 
-printf '$input'
-
-read input
-
-printf "$input"
 # this code outputs to output.txt
 echo "This is coming from my script" > output.txt
 echo $input >> output.txt
+
+echo $0
+echo $1
+echo $4
+echo $@ # array / list of all args given
+echo $# # how many arguments given
