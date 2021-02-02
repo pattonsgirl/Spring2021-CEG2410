@@ -56,7 +56,7 @@ Sometimes your script can only work if it is run as root.  Think needs to run as
   - Call the function from your `if` sudo statement
 - Write a function called `motd-message`
   - The message of the day is a message that displays when you first log in.  You may have noted that it contains an amount of junk (news channels, etc.)  The message of the day is actually a series of files in `/etc/update-motd.d/`
-  - Look through these files (using `cat`) to figure out which display useful info and which display fluff.
+  - Look through these files (using `cat`) to figure out which display useful info and which display fluff. (Note: this is not part of your final script)
   - Rename the "fluff" files to old-originalname
   - Call the function from your `if` sudo statement
 
