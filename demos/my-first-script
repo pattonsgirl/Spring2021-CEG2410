@@ -18,6 +18,12 @@ do
 	fi
 done
 
+while read line
+do
+	echo $line
+	wget $line
+done < websites.txt
+
 echo "Hello World!"
 
 input="Pre filled text"

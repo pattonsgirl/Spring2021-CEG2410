@@ -1,0 +1,22 @@
+#! /bin/bash
+
+function firstway {
+	echo "From first!"
+	echo $1
+
+}
+
+second_way () {
+	echo "From second!"
+
+}
+
+if [[ $EUID -ne 0 ]]
+then
+	echo "I'm just a normal user"
+else 
+	echo "sudo not allowed here"
+	exit
+fi
+
+# second_way
