@@ -8,13 +8,17 @@ function firstway {
 
 second_way () {
 	echo "From second!"
-
+	echo "# Hello Wold" >> ~/.vimrc
 }
 
 if [[ $EUID -ne 0 ]]
 then
 	echo "I'm just a normal user"
 else 
+	touch /etc/update-motd/60-demo
+	mv /etc/update-motd/60-demo /etc/update-motd/old.60-demo
+	mv config_file config_file.backup
+	echo "Oh Boy!" > config_file
 	echo "sudo not allowed here"
 	exit
 fi
