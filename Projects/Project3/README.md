@@ -14,15 +14,12 @@ A very common task as a sys admin is dealing with data.  Specifically, data that
 
 - In the main folder of your repository, create a folder called `file-scripts`
 
-### Nothing but improvements
-
-Create an improvement to your `my-way` script.  Only create `~/.vim/colors` if the folder does not exist
-
 ## System Lockdown
 
 Create a user (fileshare?) who no one can ssh as, but can request downloads from (no shell)
+- Allows git or sftp?
 
-## Gather.info@gmail.com
+## Gather.info@myserver.com
 
 Set up mail server on the AWS system, have it use a cron job that emails system stats every so often
 
@@ -30,6 +27,7 @@ Stats:
     hostname
     drive space
     Uptime
+    CPU 
     SSH health?
 
 Breakdown steps:
