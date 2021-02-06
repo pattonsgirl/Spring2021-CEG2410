@@ -18,20 +18,32 @@ Remember that Google is your friend - its pretty rare as a sys admin to run in t
 A very common task as a sys admin is dealing with data.  Specifically, data that needs cleaning up in some fashion - ethier by getting out a specific set of info, cleansing bad data, etc.  
 
 - In the main folder of your repository, create a folder called `file-scripts`
-- Using `wget` download these two files:
-    - 
+- Using `wget` download this file to your folder:
+    - https://raw.githubusercontent.com/pattonsgirl/Spring2021-CEG2410/main/Projects/Project3/list.txt
+- Use `sed` or another method of your choice to parse out **only the emails** from `list.txt`  Do not overwrite `list.txt`, instead save them to a file called `list-emails.txt`
+- Use `sed` or another method of your choice to parse out **only the ids** from `list.txt`  Do not overwrite `list.txt`, instead save them to a file called `list-ids.txt`
+- Once those are working successfully, script-ify it with the following parameters:
+    - Script is passed the file name as an argument
+    - Script prompts the user to to enter one of two options:
+        - `E for get emails`
+        - `I for get ids`
+    - Based on the input, script either:
+        - Parses the file for email addresses and saves them to a file called `list-emails.txt`
+        - Parses the file for ids and saves them to a file called `list-ids.txt`
+
 
 ## gather.info@myserver.com
 
-Set up mail server on the AWS system, have it use a cron job that emails system stats every so often
+- Change your hostname via `/etc/hostname` or `hostnamectl`
+    - Edit `/etc/hosts`?
 
-Stats:
-    hostname
-    drive space
-    Uptime
-    CPU 
-    SSH health?
+- Run the following commands to get a feel for what they report and how it looks.
+    - `hostname` - get the system hostname
+    - `df -h \` - get drive space taken by system & user files
+    - `uptime` - get statics for how long the system has been running (time since last reboot)
+    - `systemctl status ssh` - `systemctl status` gets the status of a given service.  In this case we are peeking at `ssh` but you could think bigger picture, like status of a web server.
 
+Make a backup of the default configuration file (ie. `cp main.cf main.cf.backup`)
 Breakdown steps:
     Create mailserver
     Create cronjob that sends an email
