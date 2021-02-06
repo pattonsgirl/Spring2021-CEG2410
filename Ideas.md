@@ -31,7 +31,9 @@ Configurations
   - Kerberos?
 - SLAPD setup documentation
 - Email from system
-- File Sharing
+- File Sharing (ntfs & samba)?
+  - https://www.digitalocean.com/community/tutorials/how-to-set-up-a-samba-share-for-a-small-organization-on-ubuntu-16-04
+  - mount shared home directoy?
 - Docker
 
 System Builds

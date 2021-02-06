@@ -7,19 +7,21 @@ When writing scripts, there are two ways to go about making sure you're on the r
 
 Remember that Google is your friend - its pretty rare as a sys admin to run in to a problem that no one else has ever found.  Between forums, blogs, and **documentation** you can usually find an answer or a place to start.  If you feel like you are going down a "rabbit hole" ask questions on the Discord channel so I or your classmates can push you back in the right direction.
 
+**Resources**
+- [Regex101](https://regex101.com/)
+    - [Learn RegEx with mini-challenges](https://regexone.com/)
+- [`sed` tutorial to manipulate text](https://www.digitalocean.com/community/tutorials/the-basics-of-using-the-sed-stream-editor-to-manipulate-text-in-linux)
 
-### You've got the magic in you
 
-A very common task as a sys admin is dealing with data.  Specifically, data that needs cleaning up in some fashion.
+### [You've got the magic in you](https://www.youtube.com/watch?v=DqMZ8TieXfU&ab_channel=puddles235)
+
+A very common task as a sys admin is dealing with data.  Specifically, data that needs cleaning up in some fashion - ethier by getting out a specific set of info, cleansing bad data, etc.  
 
 - In the main folder of your repository, create a folder called `file-scripts`
+- Using `wget` download these two files:
+    - 
 
-## System Lockdown
-
-Create a user (fileshare?) who no one can ssh as, but can request downloads from (no shell)
-- Allows git or sftp?
-
-## Gather.info@myserver.com
+## gather.info@myserver.com
 
 Set up mail server on the AWS system, have it use a cron job that emails system stats every so often
 
