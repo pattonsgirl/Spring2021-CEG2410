@@ -10,6 +10,7 @@ Remember that Google is your friend - its pretty rare as a sys admin to run in t
 - [Regex101](https://regex101.com/)
     - [Learn RegEx with mini-challenges](https://regexone.com/)
 - [`sed` tutorial to manipulate text](https://www.digitalocean.com/community/tutorials/the-basics-of-using-the-sed-stream-editor-to-manipulate-text-in-linux)
+- [`grep` with regular expressions](https://www.digitalocean.com/community/tutorials/using-grep-regular-expressions-to-search-for-text-patterns-in-linux)
 - [How to create a cronjob](https://www.cyberciti.biz/faq/how-do-i-add-jobs-to-cron-under-linux-or-unix-oses/)
 - [Setup ssmtp for mail](https://www.havetheknowhow.com/Configure-the-server/Install-ssmtp.html)
     - [How to Create and Sign In with App Passwords](https://support.google.com/accounts/answer/185833?hl=en&ctx=ch_DisplayUnlockCaptcha)
@@ -22,17 +23,21 @@ A very common task as a sys admin is dealing with data.  Specifically, data that
 - In the main folder of your repository, create a folder called `file-scripts`
 - Using `wget` download this file to your folder:
     - https://raw.githubusercontent.com/pattonsgirl/Spring2021-CEG2410/main/Projects/Project3/list.txt
-- Use `sed` or another method of your choice to parse out **only the emails** from `list.txt`  Do not overwrite `list.txt`, instead save them to a file called `list-emails.txt`
-- Use `sed` or another method of your choice to parse out **only the ids** from `list.txt`  Do not overwrite `list.txt`, instead save them to a file called `list-ids.txt`
-- Once those are working successfully, create a script named `parse-data` that will do the following:
+- Use `grep` or `sed` or another method of your choice to parse out **only the emails** from `list.txt`  Do not overwrite `list.txt`, instead save them to a file called `list-emails.txt`
+    - Example of `grep` commands that parse out just the last name:
+        - `grep -Eo "^\"\w+," list.txt > almost-list-last.txt`
+        - `grep -Eo "\w+" almost-list-last.txt > list-last.txt`
+        - Magical all in one command:
+        - `grep -Eo "^\"\w+," list.txt | grep -Eo "\w+" > list-last.txt`
+- Once that is working successfully, create a script named `parse-data` that will do the following:
     - Script is passed the file name as an argument
-    - Script prompts the user to to enter one of two options:
+    - Script prompts the user to to enter:
         - `E for get emails`
-        - `I for get ids`
-        - Note that if else statements are acceptable, so are fancier ways
-    - Based on the input, script either:
-        - Parses the file for email addresses and saves them to a file called `list-emails.txt`
-        - Parses the file for ids and saves them to a file called `list-ids.txt`
+    - Based on the input, script parses the file for email addresses and saves them to a file called `list-emails.txt`
+        - Notes:
+            - if else statements are acceptable, so are fancier ways
+            - you can assume everything is in your current directory - no worries about paths here
+
 
 **Resources**
 - [Regex101](https://regex101.com/)
@@ -67,6 +72,19 @@ A very common task as a sys admin is dealing with data.  Specifically, data that
 ## Git -> GitHub Reminder
 
 Reminder to `add`, `commit` and `push` your wonderful work for grading.
+
+## Extra Credit
+
+- Use `grep` or `sed` or another method of your choice to parse out **only the ids** from `list.txt`  Do not overwrite `list.txt`, instead save them to a file called `list-ids.txt`
+- Modify `parse-data` to meet the following criteria list:
+    - Script is passed the file name as an argument
+    - Script prompts the user to to enter one of two options:
+        - `E for get emails`
+        - `I for get ids`
+        - Note that if else statements are acceptable, so are fancier ways
+    - Based on the input, script either:
+        - Parses the file for email addresses and saves them to a file called `list-emails.txt`
+        - Parses the file for ids and saves them to a file called `list-ids.txt`
 
 ## Submission
 
