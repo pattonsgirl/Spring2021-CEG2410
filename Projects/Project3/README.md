@@ -22,7 +22,7 @@ A very common task as a sys admin is dealing with data.  Specifically, data that
     - https://raw.githubusercontent.com/pattonsgirl/Spring2021-CEG2410/main/Projects/Project3/list.txt
 - Use `sed` or another method of your choice to parse out **only the emails** from `list.txt`  Do not overwrite `list.txt`, instead save them to a file called `list-emails.txt`
 - Use `sed` or another method of your choice to parse out **only the ids** from `list.txt`  Do not overwrite `list.txt`, instead save them to a file called `list-ids.txt`
-- Once those are working successfully, script-ify it with the following parameters:
+- Once those are working successfully, create a script named `parse-data` that will do the following:
     - Script is passed the file name as an argument
     - Script prompts the user to to enter one of two options:
         - `E for get emails`
@@ -34,16 +34,19 @@ A very common task as a sys admin is dealing with data.  Specifically, data that
 
 ## gather.info@myserver.com
 
-- Change your hostname via `/etc/hostname` or `hostnamectl`
-    - Edit `/etc/hosts`?
+- Change your hostname:
+    - Edit `/etc/hostname` with the hostname you want (this is to replace `ip-10-0-0-20`)
+    - Edit `/etc/hosts` - on the first line, add space followed by your hostname
+        - `127.0.0.1 localhost new_hostname`
 
 - Run the following commands to get a feel for what they report and how it looks.
     - `hostname` - get the system hostname
     - `df -h \` - get drive space taken by system & user files
     - `uptime` - get statics for how long the system has been running (time since last reboot)
     - `systemctl status ssh` - `systemctl status` gets the status of a given service.  In this case we are peeking at `ssh` but you could think bigger picture, like status of a web server.
+- Add the commands to a script that outputs the results of the commands.  No fancy redirection, just spit it all out to the terminal.  Add this script to your `server-scripts` folder.
+- 
 
-Make a backup of the default configuration file (ie. `cp main.cf main.cf.backup`)
 Breakdown steps:
     Create mailserver
     Create cronjob that sends an email
