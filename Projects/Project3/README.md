@@ -42,7 +42,7 @@ A very common task as a sys admin is dealing with data.  Specifically, data that
 
 ## gather.info@myserver.com
 
-- Create a file named `email-info.md` in your `server-scripts` folder.  Here is where you will provide documentation for this portion of the lab.  Write your documentation such that I can clearly see what steps you took in your solution to each part.  If you don't reach the final goal (sending an email) this will be all you have to argue for partial points.
+- Create a file named `email-info.md` in your `server-scripts` folder.  Here is where you will provide documentation for this portion of the project.  Write your documentation such that I can clearly see what steps you took in your solution to each part.  If you don't reach the final goal (sending an email) this will be all you have to argue for partial points.
 
 - Change your hostname:
     - Edit `/etc/hostname` with the hostname you want (this is to replace `ip-10-0-0-20`)
@@ -72,4 +72,4 @@ Reminder to `add`, `commit` and `push` your wonderful work for grading.
 
 In your GitHub repository, select the green `Code` button then select `Download ZIP`. Upload this zip file to Pilot.
 
-In the `Comment` area in the Pilot Dropbox, copy URL / link to the repository corresponding to the project your are submitting.
+In the `Comment` area in the Pilot Dropbox, copy URL / link to the repository corresponding to the project you are submitting.

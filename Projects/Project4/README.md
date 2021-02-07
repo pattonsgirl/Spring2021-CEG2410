@@ -14,9 +14,11 @@ These days, batches creates of local users on a system are getting rare, but its
 
 ## SLAPD
 
-Send me your public key
+Send them email with password
+They create one new entry
 
-Connect to x system for slapd authentication
+Connect to system for slapd authentication
+Verify connection
 
 ## Certify me, Captain
 
