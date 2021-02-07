@@ -62,8 +62,7 @@ A very common task as a sys admin is dealing with data.  Specifically, data that
     - Authorization note: If you have 2FA setup for your gmail account, you will need to create a secondary password.  [How to Create and Sign In with App Passwords](https://support.google.com/accounts/answer/185833?hl=en&ctx=ch_DisplayUnlockCaptcha)
 - Once your email from the system works, change your `cronjob` to [mail you the results of your script](https://www.nixtutor.com/linux/sending-email-alerts-through-cron/)
 - Now, drumroll, send me an email from your `cronjob` using my `@wright.edu` address.  To prove who you are:
-    - Either send me a follow up email right after with what I should expect.  "Hey, I sent an email from blah with hostname blah"
-    - Or temporarily modify `system-pulse` to include your name or WSU email
+    - Temporarily modify `system-pulse` to include your name or WSU email
 
 ## Git -> GitHub Reminder
 
