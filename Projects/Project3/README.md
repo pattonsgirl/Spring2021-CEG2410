@@ -34,6 +34,7 @@ A very common task as a sys admin is dealing with data.  Specifically, data that
     - Script prompts the user to to enter:
         - `E for get emails`
     - Based on the input, script parses the file for email addresses and saves them to a file called `list-emails.txt`
+        - Comment your code so that there is an explanation for how your pattern match works: `# using \w+ to get 1 or more alphanumeric characters`
         - Notes:
             - if else statements are acceptable, so are fancier ways
             - you can assume everything is in your current directory - no worries about paths here
