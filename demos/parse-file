@@ -1,0 +1,28 @@
+#! /bin/bash
+
+echo $1
+# check for file existence, then proceed
+# if [[ -f $1 ]]
+# then 
+	# echo "file exists, moving forward"
+# else
+	# echo "exiting"
+	# exit
+# fi
+
+echo "L for get Last Names:"
+
+read input
+
+# maybe ask user for where they want to save file?
+output=list-last.txt
+# maybe check if list-last.txt exists, and ask before overwriting
+
+if [[ $input = "L" ]]
+then
+	echo "Getting last names from $1"
+	egrep -o "^\"\w+" $1 | egrep -o "\w+" > list-last.txt
+	echo "Last name output of $1 sent to list-last.txt"
+else
+	echo "Invalid input.  Exiting without action"
+fi
