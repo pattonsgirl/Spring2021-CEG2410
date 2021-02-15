@@ -8,7 +8,7 @@ When does the script run?
 
 2. What command will let you download a file, provided the URL of a file to download?
 
-- `wget`
+- `wget` (or `curl`)
 
 3. After running a command, I am getting this error:
 `cat: bubbles.txt: No such file or directory`
@@ -17,6 +17,7 @@ What is the problem and what is a solution?
 - The file `bubbles.txt` does not exists in the directory.  
 - Create `bubbles.txt`
 - Move to the correct folder
+- Specify path to bubbles.txt withing the command
 
 4. ____ runs when we first log in to a Linux system for the day and by default prints a message that contains details on the system, details about updates, and links to helpful articles and noteworthy news
 
