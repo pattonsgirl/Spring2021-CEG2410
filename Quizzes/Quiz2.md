@@ -17,7 +17,7 @@ What is the problem and what is a solution?
 - The file `bubbles.txt` does not exists in the directory.  
 - Create `bubbles.txt`
 - Move to the correct folder
-- Specify path to bubbles.txt withing the command
+- Specify path to bubbles.txt within the command
 
 4. ____ runs when we first log in to a Linux system for the day and by default prints a message that contains details on the system, details about updates, and links to helpful articles and noteworthy news
 
@@ -27,7 +27,7 @@ What is the problem and what is a solution?
 "Marn, Anel", marnanel@yahoo.com, 84390
 Write a regular expression pattern that will match the email address only.
 
-- Mine: \w+@\w+\.\w+
+- Mine: \w+@\w+\\.\w+
 - marnanel@yahoo.com
 - /([a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z0-9_-]+)/
 - Wrong:
