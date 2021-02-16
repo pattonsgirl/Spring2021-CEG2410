@@ -70,6 +70,16 @@ A very common task as a sys admin is dealing with data.  Specifically, data that
 - Now, drumroll, send me an email from your `cronjob` using my `@wright.edu` address.  To prove who you are:
     - Temporarily modify `system-pulse` to include your name or WSU email
 
+### Hints from Discord:
+If you are running in to permissions issues with the config file:
+- Run: `sudo su`
+- Now you should be able to go to the directory
+- Create and add content to the config file in this mode
+- Exit when done to be a normal user again
+- Now `sudo vim /etc/ssmtp/ssmtp.conf` should work just fine.
+
+If you have concerns using your personal account and trouble setting up a dummy account, send me an email.  I have a dummy account set up that you can use the credentials for to complete your project.  Note that access to the account would be disabled on the 21st.
+
 ## Git -> GitHub Reminder
 
 Reminder to `add`, `commit` and `push` your wonderful work for grading.
