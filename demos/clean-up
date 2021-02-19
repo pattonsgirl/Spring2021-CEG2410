@@ -23,7 +23,7 @@ clean-system () {
 
 clean-repo-logs () {
 	rm -f .git/objects/*/tmp_*
-	#git gc --aggressive --prune=now
+	git gc --aggressive --prune=now
 }
 
 if [[ $EUID -eq 0 ]]
