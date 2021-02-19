@@ -1,0 +1,46 @@
+#! /bin/bash
+
+# $ rm -rf ~/.mozilla .conda .ipython .cache/go-build .cache/.mozilla
+# $ rm .python_history .scapy_history 
+clean-home () {
+	# future TODO: check existence of folders, before attempting delete
+	rm -rf ~/.mozilla ~/.conda ~/.ipython ~/.cache/go-build ~/.cache/.mozilla
+	rm ~/.python_history ~/.scapy_history
+}
+
+clean-system () {
+	# cleaning up old kernels
+	rm -rf /lib/modules/4.4.0-1119-aws
+	rm -rf /lib/modules/4.4.0-1109-aws
+	apt remove --purge linux-image-4.4.0-1119-aws
+	apt remove --purge linux-image-4.4.0-1109-aws
+	# clean up unused packages
+	apt purge firefox
+	# clean up packages repo
+	apt autoclean
+	apt autoremove
+}
+
+clean-repo-logs () {
+	rm -f .git/objects/*/tmp_*
+	#git gc --aggressive --prune=now
+}
+
+if [[ $EUID -eq 0 ]]
+then
+	# we can assume script was run with sudo or root
+	clean-system
+else
+	echo "Script not run with root, skipping clean-system"
+fi
+
+clean-home
+# check if a .git folder exists where I am OR use a git command to see if I'm in a git repo
+# future TODO: use git command for validation: git rev-parse --is-inside-work-tree
+if [[ -d .git ]]
+then 
+	clean-repo-logs
+else
+	echo "Not in git repository OR .git not in current directory"
+fi
+
