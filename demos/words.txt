@@ -8,7 +8,6 @@ pear
 laptop
 destiny
 halo
-firewatch
 nms
 tea
 milk
