@@ -9,13 +9,32 @@
 - commit
 - push
 
-### Networking in review:
-- CIDR notation
+### Networking:
+- Public vs private ips
+- Routers
+    - NAT
+    - Firewall
+    - DHCP
+- DNS
+- CIDR notation (and translating to subnet masks or vice versa)
+- Ports
+    - default ports and their services
+    - When a port should be open vs closed
+- Firewalls
+    - INBOUND
+    - OUTBOUND
+    - FORWARD
 
+### Emails
+- POP vs IMAP
+- Configuration
+    - email with smtp
+        - what port?
 
 ### Linux management:
 - Basic commands:
     - man, ls, cd
+- Package management with `apt`
 - Permissions
     - owner, group, other
     - read, write, execute
@@ -27,10 +46,17 @@
     - using the `test` command ([])
     - if statements
     - for and while loops
+    - functions
+    - arguments
 - regular expressions for pattern matching
 - cron 
-    - set how often
+    - settings for how often (minute hour day-of-the-month month-of-the-year day-of-the-week)
     - what is needed to set email
-- Configuration
-    - email with smtp
-        - what port?
+- iptables
+    - consequences of chains
+
+### Disk managment
+- Clean up disk space
+    - checks logs / temp files
+    - old kernels?
+    - unused packages
