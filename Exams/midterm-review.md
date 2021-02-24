@@ -39,7 +39,7 @@
     - owner, group, other
     - read, write, execute
     - role of sudo
-- Scripting for automation of tasks
+- Scripting for automation of tasks (bash)
     - variables
     - permissions needed to run
     - user input
@@ -50,7 +50,7 @@
     - arguments
 - regular expressions for pattern matching
 - cron 
-    - settings for how often (minute hour day-of-the-month month-of-the-year day-of-the-week)
+    - settings for how often (minute hour day-of-the-month month-of-the-year day-of-the-week), or pre set frequency (@reboot, @daily, etc)
     - what is needed to set email
 - iptables
     - consequences of chains
