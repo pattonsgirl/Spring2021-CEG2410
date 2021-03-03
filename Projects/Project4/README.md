@@ -7,11 +7,6 @@ When writing scripts, there are two ways to go about making sure you're on the r
 
 Remember that Google is your friend - its pretty rare as a sys admin to run in to a problem that no one else has ever found.  Between forums, blogs, and **documentation** you can usually find an answer or a place to start.  If you feel like you are going down a "rabbit hole" ask questions on the Discord channel so I or your classmates can push you back in the right direction.
 
-
-## Local Loco
-
-These days, batches creates of local users on a system are getting rare, but its still a fun exercise.
-
 ## SLAPD
 
 Send them email with password
@@ -20,9 +15,18 @@ They create one new entry
 Connect to system for slapd authentication
 Verify connection
 
-## Certify me, Captain
+Client configuration: https://computingforgeeks.com/how-to-configure-ubuntu-as-ldap-client/
 
-Install Apache HTTP, install certbot?  https://www.digitalocean.com/community/tutorials/how-to-secure-apache-with-let-s-encrypt-on-ubuntu-16-04
+## Certifiable
+
+Enable 80 and 443 in SecurityGroup
+
+Install Apache HTTP, provide homepage / index.html
+
+Self-signed certificate
+
+Direct traffic to HTTPS only
+    Good demonstration: https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-openldap-and-phpldapadmin-on-an-ubuntu-14-04-server
 
 ## Submission
 

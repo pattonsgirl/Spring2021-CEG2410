@@ -20,6 +20,7 @@ File reading - get loop working, output to console, get another part working, et
   - script a strange install, like singularity
   - install to other systems given a list (post AD)
 - User creation
+  - Local Loco These days, batch creation of local users on a system are getting rare, but its still a fun exercise.
 - Auto-run
   - cron jobs
   - windows registry
