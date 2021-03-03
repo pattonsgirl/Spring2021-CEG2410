@@ -16,6 +16,11 @@ Connect to system for slapd authentication
 Verify connection
 
 Client configuration: https://computingforgeeks.com/how-to-configure-ubuntu-as-ldap-client/
+Client access restriction: https://www.digitalocean.com/community/tutorials/how-to-authenticate-client-computers-using-ldap-on-an-ubuntu-12-04-vps
+
+Install guide to create a SLAPD + phpldapadmin server: https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-a-basic-ldap-server-on-an-ubuntu-12-04-vps
+    Protecting phpldapadmin: https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-openldap-and-phpldapadmin-on-an-ubuntu-14-04-server
+    Next step: configure for public keys: https://serverfault.com/questions/653792/ssh-key-authentication-using-ldap
 
 ## Certifiable
 
