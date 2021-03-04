@@ -44,3 +44,10 @@ System Builds
 - Windows system, user wants to remote to desktop environment
   - Word
   - Web browser
+
+AD
+  - reset password
+  - create / delete user accounts
+
+Why directory service?
+  - centralized management of user accounts
