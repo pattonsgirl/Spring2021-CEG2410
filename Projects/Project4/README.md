@@ -61,11 +61,11 @@ Create a file named `https.md` in your `server-scripts` folder.  Here is where y
     - Configure apache HTTP Virtual Host to redirect to https://your_ip
     - **Screenshot your modified configuration file**
     - Configure apache HTTPS Virtual Host to use your cert
-    - **Screenshot your modified configuration file**
+    - **_Screenshot your modified configuration file_https://github.com/pattonsgirl/Spring2021-CEG2410/tree/main/Projects/Project4**
         - Hint: Guides to all three of these steps are [here under `Secure Apache` and `Configure the HTTP Virtual Host` and `Configure HTTPS Virtual Host](https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-openldap-and-phpldapadmin-on-an-ubuntu-14-04-server) 
     - Restart apache 
     - Refresh your browser and see if you need to validate the cert.
-    - **Link to your site**
+    - **_Link to your site_**
 
 ## Submission
 
