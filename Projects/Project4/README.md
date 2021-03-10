@@ -2,8 +2,6 @@
 
 ## Advice & Resources
 
-When writing scripts, there are two ways to go about making sure you're on the right track.  When first learning, I recommend running each command on the command line, then writing it in your script if it worked.  If you've programmed before, you may remember that print statements are your best friend when it comes to debugging.
-
 Remember that Google is your friend - its pretty rare as a sys admin to run in to a problem that no one else has ever found.  Between forums, blogs, and **documentation** you can usually find an answer or a place to start.  If you feel like you are going down a "rabbit hole" ask questions on the Discord channel so I or your classmates can push you back in the right direction.
 
 ## SLAPD
@@ -13,18 +11,18 @@ Create a file named `slapd.md` in your `server-scripts` folder.  Here is where y
 In Pilot -> Content -> Projects, there is a document containing authentication and password details to an LDAP server.  This server has had its firewalls configured to allow external access to port 339, the default LDAP port for authentication.  You job is twofold: create a new user on the LDAP server and configure your AWS instance to use this server for authentication.
 
 1. Log on to the LDAP server and create a new user and add it to one of the existing groups.  You are welcome to stick with the [Harry Potter theme](https://en.wikipedia.org/wiki/List_of_Harry_Potter_characters).  If you find yourself about to delete something, please contact me first.
-    - **Screenshot your creation of an entry (fields are filled, ready to hit apply)**
+    - **_Screenshot your creation of an entry (fields are filled, ready to hit apply)_**
 
 2. Configure your AWS system to use this LDAP server for authentication.  Follow the guide thoroughly, such that if a user is signing in to the system for the first time, PAM is configured to create them a home directory.
     - [Guide to configuring a system to authenticate with an LDAP server](https://computingforgeeks.com/how-to-configure-ubuntu-as-ldap-client/)
     - [Notes on implications of different group names and how to restrict access to specified groups](https://www.digitalocean.com/community/tutorials/how-to-authenticate-client-computers-using-ldap-on-an-ubuntu-12-04-vps)
-    - **Document the following:**
+    - **_Document the following:_**
         - packages installed (not the installation screenshots)
         - files modified (not the contents, just a list of which files were edited)
             - reason each file was modified.  I'm looking for role of what the change(s) enables
 
 3. Test the water.  Use `getent` to verify that you can query LDAP for a given username.  Use `su - username` to sign in as the user that you created on the LDAP server.
-    - **Screenshot switching to this user successfully**
+    - **_Screenshot switching to this user successfully_**
 
 ## Certifiable
 
@@ -40,28 +38,28 @@ Create a file named `https.md` in your `server-scripts` folder.  Here is where y
     - Click `Add Rule`
     - In the `Type` dropdown, select `HTTPS`. In the `Source` dropdown, select `Anywhere`
     - Click `Save Rules` when done
-    - **Screenshot your updated inbound Security Group rules**
+    - **_Screenshot your updated inbound Security Group rules_**
 
 2. [Install Apache HTTP](https://www.digitalocean.com/community/tutorials/how-to-install-the-apache-web-server-on-ubuntu-16-04)
     - Note: you can skip Step 2: Adjust the firewall 
     - Confirm your installation was successful by going to a web browser and typing in the IP address for your AWS instance.
-    - **Screenshot the status of `apache2` using `systemctl`**
+    - **_Screenshot the status of `apache2` using `systemctl`_**
 
 3. Instead of displaying the default new installation page, have it display something you want.  There is an `index.html` file in this project directory you are welcome to use.
     - Note: You can use something else.  You can make it fancier.  You can use something from CS 2800.  Beauty and complexity are not in scope here ;)
-    - **Screenshot your new index.html page showing instead of the default**
+    - **_Screenshot your new index.html page showing instead of the default_**
 
 4. You are currently using defaults, which includes using HTTP for your site.  However, people expect encrypted interaction with sites these days, so you are going to create a cerification for your web server and have the site redirect connections to HTTPS.
     - Choose a certificate method:
         - [`openssl` - Documentation is within this tutorial under the section header `Create an SSL Certificate`](https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-openldap-and-phpldapadmin-on-an-ubuntu-14-04-server)
         - [`Let's Encrypt + cerbot`](https://www.digitalocean.com/community/tutorials/how-to-secure-apache-with-let-s-encrypt-on-ubuntu-16-04)
         - Note: wherever "domain" is referenced, you are just going to use the IP address of your AWS instance
-    - **Screenshot cert creation**
+    - **_Screenshot cert creation_**
     - Enable the `ssl` module for apache
     - Configure apache HTTP Virtual Host to redirect to https://your_ip
-    - **Screenshot your modified configuration file**
+    - **_Screenshot your modified configuration file_**
     - Configure apache HTTPS Virtual Host to use your cert
-    - **_Screenshot your modified configuration file_https://github.com/pattonsgirl/Spring2021-CEG2410/tree/main/Projects/Project4**
+    - **_Screenshot your modified configuration file_**
         - Hint: Guides to all three of these steps are [here under `Secure Apache` and `Configure the HTTP Virtual Host` and `Configure HTTPS Virtual Host](https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-openldap-and-phpldapadmin-on-an-ubuntu-14-04-server) 
     - Restart apache 
     - Refresh your browser and see if you need to validate the cert.
