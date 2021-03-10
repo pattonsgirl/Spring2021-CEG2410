@@ -51,10 +51,21 @@ Create a file named `https.md` in your `server-scripts` folder.  Here is where y
     - Note: You can use something else.  You can make it fancier.  You can use something from CS 2800.  Beauty and complexity are not in scope here ;)
     - **Screenshot your new index.html page showing instead of the default**
 
-4. You are currently using defaults, which includes using HTTP for your site.  However, people expect encrypted interaction with sites these days, so you are going to 
-
-Direct traffic to HTTPS only
-    Good demonstration: https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-openldap-and-phpldapadmin-on-an-ubuntu-14-04-server
+4. You are currently using defaults, which includes using HTTP for your site.  However, people expect encrypted interaction with sites these days, so you are going to create a cerification for your web server and have the site redirect connections to HTTPS.
+    - Choose a certificate method:
+        - [`openssl` - Documentation is within this tutorial under the section header `Create an SSL Certificate`](https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-openldap-and-phpldapadmin-on-an-ubuntu-14-04-server)
+        - [`Let's Encrypt + cerbot`](https://www.digitalocean.com/community/tutorials/how-to-secure-apache-with-let-s-encrypt-on-ubuntu-16-04)
+        - Note: wherever "domain" is referenced, you are just going to use the IP address of your AWS instance
+    - **Screenshot cert creation**
+    - Enable the `ssl` module for apache
+    - Configure apache HTTP Virtual Host to redirect to https://your_ip
+    - **Screenshot your modified configuration file**
+    - Configure apache HTTPS Virtual Host to use your cert
+    - **Screenshot your modified configuration file**
+        - Hint: Guides to all three of these steps are [here under `Secure Apache` and `Configure the HTTP Virtual Host` and `Configure HTTPS Virtual Host](https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-openldap-and-phpldapadmin-on-an-ubuntu-14-04-server) 
+    - Restart apache 
+    - Refresh your browser and see if you need to validate the cert.
+    - **Link to your site**
 
 ## Submission
 
