@@ -61,6 +61,9 @@ Create a file named `https.md` in your `server-scripts` folder.  Here is where y
     - Configure apache HTTPS Virtual Host to use your cert
     - **_Screenshot your modified configuration file_**
         - Hint: Guides to all three of these steps are [here under `Secure Apache` and `Configure the HTTP Virtual Host` and `Configure HTTPS Virtual Host](https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-openldap-and-phpldapadmin-on-an-ubuntu-14-04-server) 
+        - Secondary guide: 
+            - **ignore** `Create an Apache Configuration Snippet with Strong Encryption Settings` and `Step 3: Adjust the Firewall`
+            - [Link to guide](https://www.digitalocean.com/community/tutorials/how-to-create-a-self-signed-ssl-certificate-for-apache-in-ubuntu-16-04)
     - Restart apache 
     - Refresh your browser and see if you need to validate the cert.
     - **_Link to your site_**

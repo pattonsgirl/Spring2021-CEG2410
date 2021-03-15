@@ -51,3 +51,7 @@ AD
 
 Why directory service?
   - centralized management of user accounts
+
+DNS:
+I host BIND server
+They add to resolv.conf & edit DNS entry
