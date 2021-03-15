@@ -49,6 +49,8 @@ Create a file named `https.md` in your `server-scripts` folder.  Here is where y
     - Note: You can use something else.  You can make it fancier.  You can use something from CS 2800.  Beauty and complexity are not in scope here ;)
     - **_Screenshot your new index.html page showing instead of the default_**
 
+**YOU DO NOT NEED TO INSTALL PHPLDAPADMIN** Just apache2 with an index.html of your choosing.  I have the admin, you don't need one.  Use the guides only in the scope given - to help create a certificate and have your site use TLS over HTTPS
+
 4. You are currently using defaults, which includes using HTTP for your site.  However, people expect encrypted interaction with sites these days, so you are going to create a cerification for your web server and have the site redirect connections to HTTPS.
     - Choose a certificate method:
         - [`openssl` - Documentation is within this tutorial under the section header `Create an SSL Certificate`](https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-openldap-and-phpldapadmin-on-an-ubuntu-14-04-server)
