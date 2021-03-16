@@ -14,6 +14,8 @@ clean-system () {
 	rm -rf /lib/modules/4.4.0-1109-aws
 	apt remove --purge linux-image-4.4.0-1119-aws
 	apt remove --purge linux-image-4.4.0-1109-aws
+	# remove files for go
+	rm -r /usr/local/go
 	# clean up unused packages
 	apt purge firefox
 	# clean up packages repo
