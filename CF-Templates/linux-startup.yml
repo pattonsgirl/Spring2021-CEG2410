@@ -1,6 +1,6 @@
 AWSTemplateFormatVersion: 2010-09-09
 Description: >-
-  Starter template for learning linux system administration
+  CEG 2410 - Systems Administration: Starter template for learning linux system administration
 Parameters:
   UbuntuInstanceType:
     Description: Ubuntu Server instance type
