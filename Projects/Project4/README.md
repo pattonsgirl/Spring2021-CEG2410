@@ -70,6 +70,10 @@ Create a file named `https.md` in your `server-scripts` folder.  Here is where y
     - Refresh your browser and see if you need to validate the cert.
     - **_Link to your site_**
 
+## Extra Credit (10%)
+
+You will not be penalized for following the full phpldapadmin guide.  HOWEVER, that was not what the instructions wanted.  Your task was to set up a webserver, place an index.html file on that webserver, and have the webserver only use HTTPS instead of HTTP.  The articles referenced were for just that, reference.  Therefore, this is extra credit for those who follow the core of the instructions and submit a website using HTTPS, not using just phpldapadmin.
+
 ## Submission
 
 In your GitHub repository, select the green `Code` button then select `Download ZIP`. Upload this zip file to Pilot.
