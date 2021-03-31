@@ -13,7 +13,7 @@ Parameters:
     Type: 'AWS::EC2::KeyPair::KeyName'
     ConstraintDescription: must be the name of an existing EC2 KeyPair.
   AnyIP:
-    Description: 'The IP address range that can be used to access the EC2 instance - by default the rule is set to any IP'
+    Description: 'The IP address range that can be used to access the EC2 instance - by default the rule is set to any IP.  It is recommended to set this to YOURIP/32'
     Type: String
     MinLength: '9'
     MaxLength: '18'
@@ -26,11 +26,20 @@ Mappings:
       Arch: HVM64
     t2.micro:
       Arch: HVM64
-  AWSRegionWS19: # AMI for Win Server 2019 in each supported region 
+  AWSRegionWSAD19: # AMI for Win Server 2019 in each supported region 
     us-east-1:   # N. Virginia
       PV64: NOT_SUPPORTED
-      HVM64: ami-0d42fc1154bb95f55
+      # HVM64: ami-0d42fc1154bb95f55 # CEG3400 Win 2019 with stuff on it
+      HVM64: ami-07817f5d0e3866d32 # AMI for Win Server 2019 Base
       HVMG2: NOT_SUPPORTED
+  AWSRegionWS19: # AMI for Win Server 2016 Base
+    us-east-1:   # N. Virginia
+      PV64: NOT_SUPPORTED
+      HVM64: ami-09540c9779b451713
+      HVMG2: NOT_SUPPORTED
+      # TODO: Need to replicate WS19InstanceType per instance if different AMI.  
+      #   might not be problem in future if switch to same AMI for both
+      # Windows Server 2016 Base: ami-09540c9779b451713
 Resources:
   VPC:
     Type: 'AWS::EC2::VPC'
@@ -79,12 +88,18 @@ Resources:
     Properties:
       SubnetId: !Ref Subnet
       RouteTableId: !Ref RouteTable
-  WS19IPAddress:
+  WSADIPAddress:
     Type: 'AWS::EC2::EIP'
     DependsOn: AttachGateway
     Properties:
       Domain: vpc
-      InstanceId: !Ref WS19Instance
+      InstanceId: !Ref WSADInstance
+  WSIPAddress:
+    Type: 'AWS::EC2::EIP'
+    DependsOn: AttachGateway
+    Properties:
+      Domain: vpc
+      InstanceId: !Ref WSInstance
   WS19SecurityGroup:
     Type: 'AWS::EC2::SecurityGroup'
     Properties:
@@ -95,7 +110,8 @@ Resources:
           FromPort: '22'
           ToPort: '22'
           CidrIp: !Ref AnyIP
-        - IpProtocol: -1
+        - IpProtocol: tcp
+          # Note: if tcp is set to -1, port range breaks.  All ports will be open with no specified protocol
           FromPort: '3389'
           ToPort: '3389'
           CidrIp: !Ref AnyIP
@@ -103,7 +119,33 @@ Resources:
           FromPort: '-1'
           ToPort: '-1'
           CidrIp: 10.0.0.0/16
-  WS19Instance:
+  WSADInstance:
+    Type: 'AWS::EC2::Instance'
+    DependsOn: AttachGateway
+    Properties:
+      ImageId: !FindInMap 
+        - AWSRegionWSAD19
+        - !Ref 'AWS::Region'
+        - !FindInMap 
+          - AWSInstanceType2Arch
+          - !Ref WS19InstanceType
+          - Arch
+      InstanceType: !Ref WS19InstanceType
+      KeyName: !Ref KeyName
+      Tags:
+        - Key: Application
+          Value: !Ref 'AWS::StackId'
+        - Key: Name
+          Value: Windows AD Server
+      NetworkInterfaces:
+        - GroupSet:
+            - !Ref WS19SecurityGroup
+          AssociatePublicIpAddress: 'true'
+          DeviceIndex: '0'
+          DeleteOnTermination: 'true'
+          SubnetId: !Ref Subnet
+          PrivateIpAddress: 10.0.0.30
+  WSInstance:
     Type: 'AWS::EC2::Instance'
     DependsOn: AttachGateway
     Properties:
@@ -120,7 +162,7 @@ Resources:
         - Key: Application
           Value: !Ref 'AWS::StackId'
         - Key: Name
-          Value: CEG 2410 Windows Server 2019
+          Value: WS 2016 Machine
       NetworkInterfaces:
         - GroupSet:
             - !Ref WS19SecurityGroup
@@ -128,4 +170,4 @@ Resources:
           DeviceIndex: '0'
           DeleteOnTermination: 'true'
           SubnetId: !Ref Subnet
-          PrivateIpAddress: 10.0.0.30
+          PrivateIpAddress: 10.0.0.35
