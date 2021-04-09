@@ -48,7 +48,7 @@ Remember that Google is your friend - its pretty rare as a sys admin to run in t
     - AD is seeing if there are existing DNS servers on your private network, and if so, if it should reference it.
 10. Set up administrative password.  
 11. Finish the install process.  This may need a system reboot once complete.
-12. Once you are back in, you may see that you are no longer connected to the private network.  This is nothing to panic about, but we do need to go manually configure our IPv4 settings via the Network Manager.
+12. Once you are back in, you may see that you are no longer connected to the private network.  This is nothing to panic about, but we do need to go manually configure our IPv4 settings via the Network and Sharing Center.
     - What DNS server address has been added to your network settings?  What is that address?
     - Fill in the rest of the connection information per your notes in question 1 of Part 2. Add the AWS default DNS server as an Alternate DNS Server.
     - Once you save these settings, it may cause loss of connection for your RDP connection.  Close the session and create a fresh connection.
@@ -88,7 +88,7 @@ Remember that Google is your friend - its pretty rare as a sys admin to run in t
     - The DNS server the system is configured to use
 3. Now, on the WS 2016 Machine, do the following:
     - Change the machine name (I recommend rebooting after changing)
-    - Configure the IPv4 settings via the Network Manager
+    - Configure the IPv4 settings via the Network and Sharing Center
       - Set the IPv4 settings per your notes above
       - Add your AD server as a DNS server
 4. Join the machine to the domain
