@@ -6,8 +6,19 @@ Remember that Google is your friend - its pretty rare as a sys admin to run in t
 
 ## Part 1: Connect to file share
 
+
+
 ## Part 2: Backup Plan
 
+Answer the following questions with some thought.  Most think of backups at an enterprise scale, but you really get an appreciation for backups once your own flow / life gets interrupted. 
+
+1. Describe how you currently maintain backups of your work and files important to you. Be honest.  There are still things to be learned if you aren't currently doing anything. 
+2. What redundancy does your method provide?
+3. Are you backing up your operating system, or just files within?
+4. What core programs do you use?  
+5. How long would it take to get back up and running if your system died tomorrow?
+6. Is this time reasonable?
+7. What improvements can you make to your backup plan?
 
 ## Extra Credit (10%): 
 
