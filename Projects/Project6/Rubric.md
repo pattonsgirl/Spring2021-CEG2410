@@ -2,29 +2,21 @@
 
 / 16 
 
+EC 1: / 1.6
+EC 2: / 1.6
+
 ## Create and Connect to a File Share using `nfs`
 
 - file called `nfs-config-guide.md` in the main folder of your repository
-1. On you AWS Linux instance, install `nfs-kernel-server` write the command you used.
-  - **LOW SPACE?:** to clear up space on your Linux system in AWS, run: `sudo rm -rf /opt/anaconda3` This will get a lovely 3.3 GB back.
+1. Install `nfs-kernel-server` write the command you used.
 2. Create a directory on the server (the folder you'll be sharing).  Write the command you used.
 3. Who is the user `nobody`?  Can `nobody` login to the system via a shell (ssh)?  Why is it used for `nfs` shares?
-    - [Hint](https://unix.stackexchange.com/questions/186568/what-is-nobody-user-and-group)
 4. Change the owner of the folder to be shared to `nobody` and change the group to be `nogroup`.  Write the command(s) you used.
 5. Figure out what ports `nfs` uses by default.  What two ports are they?
-    - [Here's a resource](https://library.netapp.com/ecmdocs/ECMP1155586/html/GUID-C764CE34-6F5B-42BC-B04B-7001744A44A3.html)
 6. Enable the ports in your AWS Security Groups
-    - [Sign in to AWS Educate](https://www.awseducate.com/student/s/)
-    - This link should take you directly to the [Security Groups for your Virtual Private Cloud Network](https://console.aws.amazon.com/ec2/v2/home?region=us-east-1#SecurityGroups:)
-    - Click the check box for the security group named: `ceg2410-test1-LinuxSecurityGroup-*`
-    - In the lower panel, click the `Inbound Rules` tab, then click `Edit Inbound Rules`
-    - Use `Add Rule` to add the rules
-    - Click `Save Rules` when done
     - **_Screenshot your updated inbound Security Group rules_**
 7. Create a new Linux instance in AWS - this will be your client.  Write the public / elastic IP address of the client machine.
-    - [Steps to create new instance](#Steps-to-Create-New-Instance)
 8. What is the `/etc/exports` file?
-    - [Hint](https://man7.org/linux/man-pages/man5/exports.5.html)
 9. Back in the host machine, where you made the file to share, add a line similar to the following to `/etc/exports`
     - `/path/to/your/folder/to/share CLIENT_PUBLIC_IP(rw,sync,no_subtree_check)`
     - Write the line you added.
@@ -47,8 +39,6 @@
 
 Create a file called `backup-plan.md` in the main folder of your repository.
 
-Answer the following questions with some thought.  Most think of backups at an enterprise scale, but you really get an appreciation for backups once your own flow / life gets interrupted. 
-
 1. Describe how you currently maintain backups of your work and files important to you. Be honest.  There are still things to be learned if you aren't currently doing anything. 
 2. What redundancy does your method provide?
 3. Are you backing up your operating system, or just files within?
@@ -65,29 +55,3 @@ Answer the following questions with some thought.  Most think of backups at an e
   - [Hint](https://docs.microsoft.com/en-us/windows-hardware/drivers/install/runonce-registry-key)
 - Specify either in a `powershell-notes.md` file in your `Windows` folder or in comments in the script what you edited in the Windows Registry to run the script on next reboot.
 - Add your script to the `Windows` folder in your GitHub repo.
-
-## Submission
-
-In your GitHub repository, select the green `Code` button then select `Download ZIP`. Upload this zip file to Pilot.
-
-In the `Comment` area in the Pilot Dropbox, copy URL / link to the repository corresponding to the project your are submitting.
-
-## Steps to Create New Instance
-
-You already have a Key in AWS, and you already have the key that was downloaded to your system.  You don't need to create a new Key in AWS.
-
-- [Sign in to AWS Educate](https://www.awseducate.com/student/s/)
-- [Click here to provision your new stack](https://console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/new?stackName=ceg2410-316mods&templateURL=https://cf-templates-bmjurcpfd9d8-us-east-1.s3.amazonaws.com/20210750FQ-linux-startup.yml)
-- This link autofills many fields for creating our virtual machine.
-  - On the first menu, click Next
-  - On the second menu, under Parameters, type the name of the key pair you made in the  
-    step above. If you don't remember, you can [open your key list here](https://console.aws.amazon.com/ec2/v2/home?region=us-east-1#KeyPairs:sort=keyName). Click Next
-  - On the third menu, select Next
-  - Scroll to the bottom and select Create Stack
-  - You will be redirected to a status page that says CREATE_IN_PROGRESS
-- Go to the EC2 menu and click on [Running Instances](https://console.aws.amazon.com/ec2/v2/home?region=us-east-1#Instances:sort=instanceState)
-- Click the checkbox next to `Linux Server 16_04`
-- A description menu will open up below.
-- Identify the Public IPv4 Address in the middle column. This is the IP address you will need to connect to the machine via SSH
-
-
