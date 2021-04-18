@@ -4,11 +4,29 @@
 
 Remember that Google is your friend - its pretty rare as a sys admin to run in to a problem that no one else has ever found.  Between forums, blogs, and **documentation** you can usually find an answer or a place to start.  If you feel like you are going down a "rabbit hole" ask questions on the Discord channel so I or your classmates can push you back in the right direction.
 
-## Part 1: Connect to file share
+## Part 1: Create a File Share
 
+**Note:** to clear up space on your Linux system in AWS, run: `sudo rm -rf /opt/anaconda3` This will get a lovely 3.3 GB back.
+- Install `samba`
 
+## Part 2: Connect to File Share
+
+1. Figure out what ports `samba` uses by default.  What two ports are they?
+  - See if you can figure it out from the output of `sudo netstat -tunlp`
+  - [Here's a resource](https://www.varonis.com/blog/smb-port/) if stumped
+2. Enable the ports in your AWS Security Groups
+    - [Sign in to AWS Educate](https://www.awseducate.com/student/s/)
+    - This link should take you directly to the [Security Groups for your Virtual Private Cloud Network](https://console.aws.amazon.com/ec2/v2/home?region=us-east-1#SecurityGroups:)
+    - Click the check box for the security group named: `ceg2410-test1-LinuxSecurityGroup-*`
+    - In the lower panel, click the `Inbound Rules` tab, then click `Edit Inbound Rules`
+    - Use `Add Rule` to add the rules
+    - Click `Save Rules` when done
+    - **_Screenshot your updated inbound Security Group rules_**
+3. 
 
 ## Part 2: Backup Plan
+
+Create a file called `backup-plan.md` in the main folder of your repository.
 
 Answer the following questions with some thought.  Most think of backups at an enterprise scale, but you really get an appreciation for backups once your own flow / life gets interrupted. 
 
