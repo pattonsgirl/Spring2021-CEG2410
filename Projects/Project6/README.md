@@ -4,25 +4,19 @@
 
 Remember that Google is your friend - its pretty rare as a sys admin to run in to a problem that no one else has ever found.  Between forums, blogs, and **documentation** you can usually find an answer or a place to start.  If you feel like you are going down a "rabbit hole" ask questions on the Discord channel so I or your classmates can push you back in the right direction.
 
-## Project Deliverable
+## Part 1: Connect to file share
 
-- Create a folder called `Windows` in your repository for the course.  Project documentation should be in a file named `ad-setup.md`
-- You may enjoy using MobaXTerm for the RDP connections to the Windows servers.  It can help with password management.
+## Part 2: Backup Plan
 
-Simulating hardware:
 
-Add volume to AWS instance, mount it?
+## Extra Credit (10%): 
 
-Install Powershell module for VS Code - may prompt to install additional packages.  Select Yes where prompted
-  - Powershell ISE is being phased out
-
-Powershell script that outputs a file to the Desktop.  Use the registry editor to have this script run once at next reboot
-
-https://docs.microsoft.com/en-us/powershell/scripting/dev-cross-plat/vscode/how-to-replicate-the-ise-experience-in-vscode?view=powershell-7.1
-
-Adding user to access machine
-
-Group policy for machine
+- **Note**: this opportunity can be used on any Windows machine - the AWS Windows instances or your own machine.
+- Create a Powershell script that outputs a file to the Desktop.  The file content's should be a timestamp (also using a Powershell command / module)  
+- Use the registry editor to have this script run once at next reboot
+  - [Hint](https://docs.microsoft.com/en-us/windows-hardware/drivers/install/runonce-registry-key)
+- Specify either in a `README.md` file or in comments in the script what you edited in the Windows Registry to run the script on next reboot.
+- Add your script to the `Windows` folder in your GitHub repo.
 
 ## Submission
 
