@@ -1,18 +1,11 @@
-# Project 6
+# Project 6 Rubric
 
-## Advice & Resources
+/ 16 
 
-Remember that Google is your friend - its pretty rare as a sys admin to run in to a problem that no one else has ever found.  Between forums, blogs, and **documentation** you can usually find an answer or a place to start.  If you feel like you are going down a "rabbit hole" ask questions on the Discord channel so I or your classmates can push you back in the right direction.
+## Create and Connect to a File Share using `nfs`
 
-## Part 1: Create and Connect to a File Share using `nfs`
-
-Create a file called `nfs-config-guide.md` in the main folder of your repository.  Ideally this will end up looking like a nice how-to guide, but you can also answer each question / step below in the file for grading.
-
-- There are a million and one file share solutions out there - were going to go with one of the easier to set up ones, NFS.  The purpose of this is to set up a server that can host files, then configure systems (clients) to connect to the host.  NFS is not necessarly the best recommended solution for your future needs.  You could also investigate samba or sshfs, or DropBox or OneDrive, or an open source alternative [file hosting server](https://alternativeto.net/software/owncloud/?platform=self-hosted) with more browser / GUI features.
-- [Reference material for creating and connecting NFS server in Linux](https://www.digitalocean.com/community/tutorials/how-to-set-up-an-nfs-mount-on-ubuntu-16-04)
-- A neat comparision in performance between NFS, SMB (samba), and SSHFS [linked here](https://blog.ja-ke.tech/2019/08/27/nas-performance-sshfs-nfs-smb.html)
-
-1. On your AWS Linux instance, install `nfs-kernel-server` write the command you used.
+- file called `nfs-config-guide.md` in the main folder of your repository
+1. On you AWS Linux instance, install `nfs-kernel-server` write the command you used.
   - **LOW SPACE?:** to clear up space on your Linux system in AWS, run: `sudo rm -rf /opt/anaconda3` This will get a lovely 3.3 GB back.
 2. Create a directory on the server (the folder you'll be sharing).  Write the command you used.
 3. Who is the user `nobody`?  Can `nobody` login to the system via a shell (ssh)?  Why is it used for `nfs` shares?
