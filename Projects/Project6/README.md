@@ -39,16 +39,17 @@ Create a file called `nfs-config-guide.md` in the main folder of your repository
       - `rw`
       - `sync`
       - `no_subtree_check`
-10. SSH in to the client machine.  Write the command you used.
-11. Install `nfs-common`.  Write the command you used.
-12. Create a folder on the client machine - this is where you'll be mounting the host folder to.  Write the command you used.
+10. **Missing step ammendment:** Restart nfs (`systemctl`) or export your updated exports file (`exportfs -a`) using `sudo`.  Write the command you used.
+11. SSH in to the client machine.  Write the command you used.
+12. Install `nfs-common`.  Write the command you used.
+13. Create a folder on the client machine - this is where you'll be mounting the host folder to.  Write the command you used.
     - Note: you may need to use `sudo` depending on where you'd like the folder.
-13. Mount the shared folder to your client's folder using a command similar to the following:
+14. Mount the shared folder to your client's folder using a command similar to the following:
     - `sudo mount HOST_PUBLIC_IP:/path/to/shared/folder /path/to/client/folder`
     - Write the command you used
-14. Run `df -h` - has your share been mounted?  How much space is available?
-15. `cd` to the folder, and add some files with some text.  Don't change permissions (so may need `sudo`).  Screenshot your folder contents.
-16. Go back to the host machine, and go to the shared folder.  Can you see the files created by the host?  Screenshot the folder contents.
+15. Run `df -h` - has your share been mounted?  How much space is available?
+16. `cd` to the folder, and add some files with some text.  Don't change permissions (so may need `sudo`).  Screenshot your folder contents.
+17. Go back to the host machine, and go to the shared folder.  Can you see the files created by the host?  Screenshot the folder contents.
 
 ## Extra Credit: Backup Plan (10%)
 
