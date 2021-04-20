@@ -40,6 +40,7 @@ Create a file called `nfs-config-guide.md` in the main folder of your repository
       - `sync`
       - `no_subtree_check`
 10. **Missing step amendment:** Restart nfs (`systemctl`) or export your updated exports file (`exportfs -a`) using `sudo`.  Write the command you used.
+  - [Resource](https://unix.stackexchange.com/questions/106122/mount-nfs-access-denied-by-server-while-mounting-on-ubuntu-machines)
 11. SSH in to the client machine.  Write the command you used.
 12. Install `nfs-common`.  Write the command you used.
 13. Create a folder on the client machine - this is where you'll be mounting the host folder to.  Write the command you used.
