@@ -37,7 +37,7 @@ Final: Friday, 4/30
         - Group policies are applied to OUs
     - Groups
         - applies to clusters of users, think admins vs students.  Can grant access rights based on group membership
-    - Can configure an AD server to also be a DNS server
+    - Can configure an AD server to also be a DNS server - it's just a server, server's can do multiple things
     - DNS server needs to be setup so other computers can look for the domain
     - Group policies
         - Can be set locally (even non-domain computers) or within an OU on a domain 
