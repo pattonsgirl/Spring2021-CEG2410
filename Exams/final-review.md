@@ -49,12 +49,13 @@ Final: Friday, 4/30
 - HTTP
     - Port 80
     - default configuration when apache2 HTTP is installed
+    - a2ensite & a2enmod
 - HTTPS
     - Port 443
     - encrypts communication
     - requires TLS/SSL certificate
 - Basic apache2 HTTP server configuration
-    - Configure port 80 connections to redirect to HTTP
+    - Configure port 80 connections to redirect to HTTPS
     - Configure HTTPS to use certs stored on server
 - TLS/SSL Certificates
     - Works by:
